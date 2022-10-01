@@ -42,10 +42,14 @@ class Section extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
               actions: [
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                        Icons.filter_alt_sharp, color: Constants.deepcolor))
+                PopupMenuButton(itemBuilder: (context) =>
+                [
+                  PopupMenuItem(child: Text(' All Section'),),
+                  PopupMenuItem(child: Text(' Finished Section')),
+                  PopupMenuItem(child: Text(' Remaining Section')),
+                ]
+                  ,icon:Icon(Icons.filter_alt,color: Constants.deepcolor,),
+                )
               ],
             ),
             body:

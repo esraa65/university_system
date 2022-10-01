@@ -39,7 +39,12 @@ class Faqs extends StatelessWidget {
               ),
               body: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: ExpansionWidget(
+                  child: myFaqCubit.Faqmodel == null
+                      ? Center(child: CircularProgressIndicator(color: Constants.deepcolor,)):
+
+
+
+                  ExpansionWidget(
                       initiallyExpanded: false,
                       titleBuilder: (double animationValue, _, bool isExpaned,
                           toogleFunction) {

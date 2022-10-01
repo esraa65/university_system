@@ -44,10 +44,14 @@ class Midterm extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
               actions: [
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.filter_alt_sharp,
-                        color: Constants.deepcolor))
+                PopupMenuButton(itemBuilder: (context) =>
+                [
+                  PopupMenuItem(child: Text(' All MidTerm'),),
+                  PopupMenuItem(child: Text(' Finished MidTerm')),
+                  PopupMenuItem(child: Text(' Remaining MidTerm')),
+                ]
+                  ,icon:Icon(Icons.filter_alt,color: Constants.deepcolor),
+                )
               ],
             ),
             body: Padding(

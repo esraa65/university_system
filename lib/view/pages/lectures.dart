@@ -5,7 +5,10 @@ import 'package:university_system/view/component/home/lecturecarditem.dart';
 import 'package:university_system/view/pages/mainhome.dart';
 import 'package:university_system/viewmodel/lecture/lecture_cubit.dart';
 
+
 class Lecture extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -40,10 +43,15 @@ class Lecture extends StatelessWidget {
                         fontWeight: FontWeight.w500),
                   ),
                   actions: [
-                    IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.filter_alt_sharp,
-                            color: Constants.deepcolor))
+
+                    PopupMenuButton(itemBuilder: (context) =>
+                    [
+                      PopupMenuItem(child: Text(' All Lecture'),),
+                      PopupMenuItem(child: Text(' Finished Lecture')),
+                      PopupMenuItem(child: Text(' Remaining Lecture')),
+                    ]
+                      ,icon:Icon(Icons.filter_alt,color: Constants.deepcolor,),
+                    )
                   ],
                 ),
                 body: Padding(
@@ -81,12 +89,3 @@ class Lecture extends StatelessWidget {
     );
   }
 }
-/* child: ListView(
-                    children: [
-                      LectureCardItem(
-                          'Flutter', 'wednesday', '12:00pm', '2:00pm', 2),
-                      LectureCardItem(
-                          'React', 'thursday', '12:00pm', '2:00pm', 2),
-                      LectureCardItem('Vue', 'thursday', '12:00pm', '2:00pm', 2),
-                    ],
-                  ),*/

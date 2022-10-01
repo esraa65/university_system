@@ -44,10 +44,14 @@ class Final extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
               actions: [
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.filter_alt_sharp,
-                        color: Constants.deepcolor))
+                PopupMenuButton(itemBuilder: (context) =>
+                [
+                  PopupMenuItem(child: Text(' All Final'),),
+                  PopupMenuItem(child: Text(' Finished Final')),
+                  PopupMenuItem(child: Text(' Remaining Final')),
+                ]
+                  ,icon:Icon(Icons.filter_alt,color: Constants.deepcolor,size: 30,),
+                )
               ],
             ),
             body:  Padding(

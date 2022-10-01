@@ -45,8 +45,8 @@ class NewsCardData extends StatelessWidget {
                             padding: const EdgeInsets.all(20.0),
                             child: Row(mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text('Orange ',style: TextStyle(fontSize: 25,fontWeight:FontWeight.w500,color: Constants.orangetext),),
-                                Text(' Digital Center',style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+                                Text('Orange ',style: TextStyle(fontSize: 20,fontWeight:FontWeight.w500,color: Constants.orangetext),),
+                                Text(' Digital Center',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
                               ],
                             ),
                           ),
