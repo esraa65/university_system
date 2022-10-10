@@ -25,50 +25,49 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Expanded(
-        child: Container(
-          color: Colors.white,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  children: [
-                    Text(
-                      'Orange ',
-                      style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w500,
-                          color: Constants.orangetext,
-                          decoration: TextDecoration.none),
-                    ),
-                    Text(
-                      ' Digital Center',
-                      style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w500,
-                          decoration: TextDecoration.none),
-                    )
-                  ],
-                ),
+      child: Container(
+        color: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                children: [
+                  Text(
+                    'Orange ',
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w500,
+                        color: Constants.orangetext,
+                        decoration: TextDecoration.none),
+                  ),
+                  Text(
+                    ' Digital Center',
+                    style: TextStyle(
+                      color: Colors.black,
+                        fontSize: 25,
+                        fontWeight: FontWeight.w500,
+                        decoration: TextDecoration.none),
+                  )
+                ],
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-                child: LinearPercentIndicator(
-                  backgroundColor: Colors.black12,
-                  width: MediaQuery.of(context).size.width - 40,
-                  progressColor: Colors.deepOrangeAccent,
-                  lineHeight: 10.0,
-                  animation: true,
-                  animationDuration: 1600,
-                  barRadius: Radius.circular(10),
-                  percent: 1.0,
-                ),
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+              child: LinearPercentIndicator(
+                backgroundColor: Colors.black12,
+                width: MediaQuery.of(context).size.width - 40,
+                progressColor: Colors.deepOrangeAccent,
+                lineHeight: 10.0,
+                animation: true,
+                animationDuration: 1600,
+                barRadius: Radius.circular(10),
+                percent: 1.0,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -59,7 +59,8 @@ class Login extends StatelessWidget {
                               "email",textCt:MyloginCubit.email
                             ),
                             customText("password",textCt:MyloginCubit.pass,
-                                icon: Icon(Icons.remove_red_eye)),
+                                icon: Icon(Icons.remove_red_eye,color: Constants.orangetext,)
+                            ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
